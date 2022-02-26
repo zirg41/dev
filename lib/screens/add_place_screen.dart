@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
 import '/providers/great_places.dart';
@@ -24,9 +25,12 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
   }
 
   void _savePlace() {
+    print("before");
+    print(_pickedImage == null);
     if (_titleController.text.isEmpty || _pickedImage == null) {
       return;
     }
+    print("after");
     Provider.of<GreatPlaces>(context, listen: false).addPlace(
       _titleController.text,
       _pickedImage,

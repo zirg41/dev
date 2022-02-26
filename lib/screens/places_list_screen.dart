@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_complete_guide/providers/great_places.dart';
 import 'package:flutter_complete_guide/screens/add_place_screen.dart';
@@ -29,8 +31,8 @@ class PlacesListScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return ListTile(
                         leading: CircleAvatar(
-                          backgroundImage:
-                              FileImage(greatPlaces.items[index].image),
+                          backgroundImage: FileImage(
+                              File(greatPlaces.items[index].image.path)),
                         ),
                         title: Text(greatPlaces.items[index].title),
                         onTap: () {
