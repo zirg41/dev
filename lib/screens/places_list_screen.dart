@@ -39,8 +39,9 @@ class PlacesListScreen extends StatelessWidget {
                             itemBuilder: (context, index) {
                               return ListTile(
                                 leading: CircleAvatar(
-                                  backgroundImage: FileImage(File(
-                                      greatPlaces.items[index].image.path)),
+                                  backgroundImage: FileImage(
+                                    File(greatPlaces.items[index].image.path),
+                                  ),
                                 ),
                                 title: Text(greatPlaces.items[index].title),
                                 onTap: () {

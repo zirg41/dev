@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_complete_guide/widgets/location_input.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -58,6 +59,8 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                   ),
                   SizedBox(height: 10),
                   ImageInput(_selectImage),
+                  SizedBox(height: 10),
+                  LocationInput(),
                 ],
               ),
             ),
